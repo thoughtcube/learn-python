@@ -22,7 +22,15 @@
 # Note: python does not have a ++ operator, but += works.
 def match_ends(words):
   # +++your code here+++
-  return
+  matches = 0
+  # Count number of strings where string lenth is >=2
+  # AND first and last char of string same
+  for word in words:
+      suffix = word[:1]
+      does_it_end = word.endswith(suffix, 0, len(word))
+      if (len(word) >= 2) and (does_it_end):
+        matches += 1
+  return matches
 
 
 # B. front_x
