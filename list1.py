@@ -42,7 +42,18 @@ def match_ends(words):
 # before combining them.
 def front_x(words):
   # +++your code here+++
-  return
+  xwords = []
+  notxwords = []
+  for word in words:
+      first_letter = word[:1]
+      if first_letter is "x":
+        xwords.append(word)
+      else:
+        notxwords.append(word)
+  xwords.sort()
+  notxwords.sort()
+  mergedwords = xwords + notxwords
+  return (mergedwords)
 
 
 
