@@ -50,9 +50,7 @@ def front_x(words):
         xwords.append(word)
       else:
         notxwords.append(word)
-  xwords.sort()
-  notxwords.sort()
-  mergedwords = xwords + notxwords
+  mergedwords = xwords.sort() + notxwords.sort()
   return (mergedwords)
 
 
