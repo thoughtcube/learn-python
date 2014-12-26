@@ -35,9 +35,8 @@ def verbing(s):
 # This dinner is good!
 def not_bad(s):
   # +++your code here+++
-  if s.find("not"):
-    if s.find("bad"):
-      print "found one"
+  if s.find("not") < s.find("bad"):
+    s = s[:s.find("not")] + "good" + s[s.find("bad")+len("bad"):]
   return s
 
 
