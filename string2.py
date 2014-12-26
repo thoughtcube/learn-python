@@ -49,7 +49,21 @@ def not_bad(s):
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
   # +++your code here+++
-  return
+  if (len(a) % 2) == 0:   # if even
+    a_front = a[:len(a)/2]
+    a_back = a[len(a)/2:]
+  else:
+    a_front = a[:len(a)/2 + 1]
+    a_back = a[len(a)/2 + 1:]
+
+  if (len(b) % 2) == 0:   # if even
+    b_front = b[:len(b)/2]
+    b_back = b[len(b)/2:]
+  else:
+    b_front = b[:len(b)/2 + 1]
+    b_back = b[len(b)/2 + 1:]
+
+  return a_front + b_front + a_back + b_back
 
 
 # Simple provided test() function used in main() to print
